@@ -1,0 +1,32 @@
+#Python Calculator
+
+x = int(input('Enter a number : '))
+y = int(input('Enter another number : '))
+
+operation = str(input('Enter operation which will be performed : '))
+
+if (operation == '+'):
+    print('Sum of two numbers are : ', x + y)
+    
+elif (operation == '-'):
+    print('Subtraction of two numbers are : ', x - y)
+
+elif (operation == '*'):
+    print('Multiplication of two numbers are : ', x * y)
+
+elif (operation == '/'):
+    print('Division of two numbers are : ', x / y)
+
+elif (operation == '//'):
+    print('Float Division of two numbers are : ', x // y)
+
+elif (operation == '%'):
+    print('Remainder of two numbers be : ', x % y)
+
+elif (operation == '**'):
+    print('Exponent of two number be : ', x ** y)
+
+else:
+    print('Invalid Input')
+    
+print('Thank You !')

@@ -1,0 +1,50 @@
+import random
+
+#taking input from the user
+def Getting_User_Input():
+    user_input = input('Enter your choice (rock, paper, scissors) : ').lower()
+    while user_input not in ['rock', 'paper', 'scissors']:
+        print('Invalid Input!')
+        user_input = input('Enter valid input (rock, paper, scissors) : ').lower
+        
+    return user_input
+    
+#taking computer response
+def Getting_Computer_Response():
+    return random.choice(['rock', 'paper', 'scissors'])
+ 
+#finding Winner   
+def Winner(user_choice, computer_choice):
+    if user_choice == computer_choice :
+        return "It's a Tie!"
+        
+    elif (user_choice == 'rock' and computer_choice == 'scissors'):
+        return 'Congratulations! You Win'
+    elif (user_choice == 'scissors' and computer_choice == 'paper'):
+        return 'Congratulations! You Win'
+    elif (user_choice == 'paper' and computer_choice == 'rock'):
+        return 'Congratulations! You Win'
+        
+    else:
+        return 'You Lost! Computer Wins'
+        
+#now game is on 
+
+def Game_Play():
+    user_choice = Getting_User_Input()
+    computer_choice = Getting_Computer_Response()
+    
+    print('You choose : ', user_choice)
+    print('Computer choose : ', computer_choice)
+    
+    result = Winner(user_choice,computer_choice)
+    print(result)
+       
+    #play again command
+    play_input = input('PLay again (Yes or No):').lower()
+    if play_input == 'yes':
+        Game_Play()
+    else:
+        pass
+    
+Game_Play()
